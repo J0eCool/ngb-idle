@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://5qlwbcyled3j" path="res://assets/doodlesprites/doodlesprites_01.tres" id="1_2h071"]
 [ext_resource type="Texture2D" uid="uid://bhhwn057oiu8b" path="res://assets/doodlesprites/doodlesprites_03.tres" id="2_ee2j8"]
 [ext_resource type="Texture2D" uid="uid://bs3wvn62pyi0a" path="res://assets/doodlesprites/doodlesprites_02.tres" id="3_a2fma"]
-[ext_resource type="Texture2D" uid="uid://be6mk0ao3fqqe" path="res://assets/doodlesprites/doodlesprites_04.tres" id="4_5ce5i"]
+[ext_resource type="Texture2D" uid="uid://ctn61vl6aapal" path="res://assets/doodlesprites/doodlesprites_04.tres" id="4_5ce5i"]
 [ext_resource type="Texture2D" uid="uid://dxmjvfs5f74k4" path="res://assets/doodlesprites/doodlesprites_05.tres" id="5_0vopw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avshf"]
@@ -68,6 +68,9 @@ _data = {
 }
 
 [node name="main" type="Walkies"]
+spd = 500.0
+boundLo = 30.0
+boundHi = 1024.0
 
 [node name="MyClass" type="MyClass" parent="."]
 anchors_preset = 8
@@ -84,9 +87,9 @@ grow_vertical = 2
 text = "DEFAULT TEXT: run project to change."
 label_settings = SubResource("LabelSettings_avshf")
 
-[node name="Thinger" type="Thinger" parent="."]
+[node name="Thinger" type="Node2D" parent="."]
 
-[node name="Stinger" type="Stinger" parent="."]
+[node name="Stinger" type="Node2D" parent="."]
 
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(197, 127)
