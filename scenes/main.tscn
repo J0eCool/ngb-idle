@@ -28,3 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "DEFAULT TEXT: run project to change."
 label_settings = SubResource("LabelSettings_avshf")
+
+[node name="Thinger" type="Thinger" parent="."]
+
+[node name="Stinger" type="Stinger" parent="."]
