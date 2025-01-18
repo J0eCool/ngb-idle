@@ -20,6 +20,10 @@ method ready(self: Walkies) {.gdsync.} =
   self.player = self.getNode("Player") as CharacterBody2D
   self.anim = self.getNode("Player/AnimationPlayer") as AnimationPlayer
 
+  let area = self.getNode("Area2D")
+  discard area.connect("body_entered", self.callable("_on_body_entered"))
+  discard area.connect("body_exited", self.callable("_on_body_exited"))
+
 method process(self: Walkies, dt: float) {.gdsync.} =
   if Engine.isEditorHint: return
   case self.dx
@@ -37,3 +41,9 @@ method input(self: Walkies, event: GdRef[InputEvent]) {.gdsync.} =
 
   if event[].isActionReleased("left") or event[].isActionReleased("right"):
     self.dx = 0
+
+
+proc on_body_entered(self: Walkies) {.gdsync, name: "_on_body_entered".} =
+  print("HEY, ENTERED")
+proc on_body_exited(self: Walkies) {.gdsync, name: "_on_body_exited".} =
+  print("aw, they left...")
