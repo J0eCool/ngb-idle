@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6dg78k126cuk"]
+[gd_scene load_steps=14 format=3 uid="uid://c6dg78k126cuk"]
 
 [ext_resource type="Texture2D" uid="uid://5qlwbcyled3j" path="res://assets/doodlesprites/doodlesprites_01.tres" id="1_2h071"]
 [ext_resource type="Texture2D" uid="uid://bhhwn057oiu8b" path="res://assets/doodlesprites/doodlesprites_03.tres" id="2_ee2j8"]
 [ext_resource type="Texture2D" uid="uid://bs3wvn62pyi0a" path="res://assets/doodlesprites/doodlesprites_02.tres" id="3_a2fma"]
 [ext_resource type="Texture2D" uid="uid://ctn61vl6aapal" path="res://assets/doodlesprites/doodlesprites_04.tres" id="4_5ce5i"]
 [ext_resource type="Texture2D" uid="uid://dxmjvfs5f74k4" path="res://assets/doodlesprites/doodlesprites_05.tres" id="5_0vopw"]
+[ext_resource type="Texture2D" uid="uid://cks36yntus3q6" path="res://assets/doodlesprites/doodlesprites_06.tres" id="6_w6e08"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avshf"]
 font_size = 48
@@ -67,10 +68,36 @@ _data = {
 "walk_right": SubResource("Animation_v68cm")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6kmm"]
+size = Vector2(44.7246, 37.2951)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5n37"]
+size = Vector2(307, 244)
+
 [node name="main" type="Walkies"]
-spd = 500.0
-boundLo = 30.0
-boundHi = 1024.0
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = 74.0
+offset_top = 274.0
+offset_right = 1120.0
+offset_bottom = 315.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = 163.0
+offset_top = 356.0
+offset_right = 1199.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Background"]
+offset_left = 328.0
+offset_top = 502.0
+offset_right = 1303.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)
 
 [node name="MyClass" type="MyClass" parent="."]
 anchors_preset = 8
@@ -87,11 +114,7 @@ grow_vertical = 2
 text = "DEFAULT TEXT: run project to change."
 label_settings = SubResource("LabelSettings_avshf")
 
-[node name="Thinger" type="Node2D" parent="."]
-
-[node name="Stinger" type="Node2D" parent="."]
-
-[node name="Player" type="Node2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(197, 127)
 scale = Vector2(4.65069, 4.85319)
 
@@ -102,3 +125,19 @@ texture = ExtResource("1_2h071")
 libraries = {
 "": SubResource("AnimationLibrary_7dr4p")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0.215034, -0.103024)
+shape = SubResource("RectangleShape2D_n6kmm")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(977, 137)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, -3)
+shape = SubResource("RectangleShape2D_g5n37")
+
+[node name="Doodlesprites06" type="Sprite2D" parent="Area2D"]
+position = Vector2(1, 1)
+scale = Vector2(4.9902, 4.9902)
+texture = ExtResource("6_w6e08")
