@@ -15,6 +15,7 @@ type Walkies* = ptr object of Node2D
   anim: AnimationPlayer
   dx: int
 
+
 method ready(self: Walkies) {.gdsync.} =
   if Engine.isEditorHint: return
   self.player = self.getNode("Player") as CharacterBody2D
