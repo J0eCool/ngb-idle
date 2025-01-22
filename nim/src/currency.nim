@@ -14,3 +14,7 @@ type
   CurrencyBank* = ptr object of Control
     title* {.gdexport.}: string
     # currencies* {.gdexport.}: Array
+
+method ready(self: CurrencyBank) {.gdsync.} =
+  if Engine.isEditorHint: return
+  print("Hello: " & self.title)

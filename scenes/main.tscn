@@ -63,9 +63,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7dr4p"]
 _data = {
-"RESET": SubResource("Animation_t4ygx"),
-"walk_left": SubResource("Animation_p2dyq"),
-"walk_right": SubResource("Animation_v68cm")
+&"RESET": SubResource("Animation_t4ygx"),
+&"walk_left": SubResource("Animation_p2dyq"),
+&"walk_right": SubResource("Animation_v68cm")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n6kmm"]
@@ -123,7 +123,7 @@ texture = ExtResource("1_2h071")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
-"": SubResource("AnimationLibrary_7dr4p")
+&"": SubResource("AnimationLibrary_7dr4p")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
