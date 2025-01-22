@@ -4,6 +4,7 @@
 import gdext
 import gdext/classes/[
   gdControl,
+  gdLabel,
 ]
 
 type
@@ -13,8 +14,14 @@ type
     limit* {.gdexport.}: int
   CurrencyBank* = ptr object of Control
     title* {.gdexport.}: string
-    # currencies* {.gdexport.}: Array
+    currency* {.gdexport.}: Resource
 
 method ready(self: CurrencyBank) {.gdsync.} =
-  if Engine.isEditorHint: return
-  print("Hello: " & self.title)
+  # note this runs in the editor too
+  let lbl = instantiate Label
+  self.addChild(lbl)
+
+# method process(self: CurrencyBank, dt: float) {.gdsync.} =
+#   let lbl = instantiate Label
+#   lbl.text= "Hello: " & self.title
+#   self.addChild(lbl)

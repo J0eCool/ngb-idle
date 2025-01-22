@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://do73gw7pjrrrv"]
+
+[ext_resource type="Script" uid="uid://v6f6brmw3kgc" path="res://scenes/numbers/currency.gd" id="1_icwv5"]
+
+[node name="Currency" type="Label"]
+text = "Void: 0"
+script = ExtResource("1_icwv5")

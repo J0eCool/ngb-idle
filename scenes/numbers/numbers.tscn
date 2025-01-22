@@ -10,9 +10,15 @@ grow_vertical = 2
 metadata/Comment = "Numbers is a game about stuff"
 
 [node name="CurrencyBank" type="CurrencyBank" parent="."]
-title = "beep"
+title = "yeep"
 layout_mode = 0
-offset_left = 59.0
-offset_top = 67.0
-offset_right = 437.0
-offset_bottom = 247.0
+offset_left = 291.0
+offset_top = 110.0
+offset_right = 669.0
+offset_bottom = 290.0
+
+[node name="CurrencyBank2" type="CurrencyBank" parent="."]
+title = "jeep"
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

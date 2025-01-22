@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://d012713w7i76q"]
+
+[ext_resource type="PackedScene" uid="uid://c1ugjs61ik0jg" path="res://scenes/numbers/currency_bank.tscn" id="1_g8xh3"]
+[ext_resource type="PackedScene" uid="uid://do73gw7pjrrrv" path="res://scenes/numbers/currency.tscn" id="2_msmp3"]
+
+[node name="Numbers-2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CurrencyBank" parent="." instance=ExtResource("1_g8xh3")]
+layout_mode = 1
+
+[node name="Currency" parent="CurrencyBank" instance=ExtResource("2_msmp3")]
+layout_mode = 2
+text = "Light: 0 / 16"
+type = 1
+limit = 16
+
+[node name="Currency2" parent="CurrencyBank" instance=ExtResource("2_msmp3")]
+layout_mode = 2
+text = "Air: 0 / 1024"
+type = 2
+limit = 1024
+
+[node name="Currency3" parent="CurrencyBank" instance=ExtResource("2_msmp3")]
+layout_mode = 2
+text = "Fire: 0"
+type = 3
