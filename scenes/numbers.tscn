@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlkwakup5kglq"]
+
+[node name="Numbers" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/Comment = "Numbers is a game about stuff"
+
+[node name="CurrencyBank" type="CurrencyBank" parent="."]
+title = "beep"
+layout_mode = 0
+offset_left = 59.0
+offset_top = 67.0
+offset_right = 437.0
+offset_bottom = 247.0
