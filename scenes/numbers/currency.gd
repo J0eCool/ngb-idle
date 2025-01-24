@@ -1,6 +1,8 @@
 @tool
 extends Label
 
+class_name Currency
+
 enum Type {
 	Void=0,
 	Light=1,

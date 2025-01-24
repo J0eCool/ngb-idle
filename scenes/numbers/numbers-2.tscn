@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d012713w7i76q"]
+[gd_scene load_steps=4 format=3 uid="uid://d012713w7i76q"]
 
 [ext_resource type="PackedScene" uid="uid://c1ugjs61ik0jg" path="res://scenes/numbers/currency_bank.tscn" id="1_g8xh3"]
+[ext_resource type="Script" uid="uid://b3jfus4wr5rmu" path="res://scenes/numbers/numbers_2.gd" id="1_kga60"]
 [ext_resource type="PackedScene" uid="uid://do73gw7pjrrrv" path="res://scenes/numbers/currency.tscn" id="2_msmp3"]
 
 [node name="Numbers-2" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kga60")
 
 [node name="CurrencyBank" parent="." instance=ExtResource("1_g8xh3")]
 layout_mode = 1
@@ -30,3 +32,22 @@ limit = 1024
 layout_mode = 2
 text = "Fire: 0"
 type = 3
+
+[node name="+Light" type="Button" parent="."]
+layout_mode = 2
+offset_left = 618.0
+offset_top = 282.0
+offset_right = 790.0
+offset_bottom = 363.0
+text = "+ Light"
+
+[node name="+Air" type="Button" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 382.0
+offset_right = 417.0
+offset_bottom = 459.0
+text = "+ Air"
+
+[connection signal="button_down" from="+Light" to="." method="_on_light_button_down"]
+[connection signal="button_down" from="+Air" to="." method="_on_air_button_down"]
