@@ -1,18 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://d60frdoiqqjh"]
+[gd_scene load_steps=7 format=3 uid="uid://d60frdoiqqjh"]
 
 [ext_resource type="Script" uid="uid://bkllijtao5ss4" path="res://scenes/skill_tree/skill_tree.gd" id="1_7utke"]
+[ext_resource type="Script" uid="uid://y5hxxdim33xe" path="res://scenes/skill_tree/evenly_distributed_path.gd" id="2_qyvaf"]
+[ext_resource type="Shader" uid="uid://dcc4kt3p1sg3m" path="res://scenes/skill_tree/skill_tree_node.gdshader" id="3_ynme6"]
 
 [sub_resource type="Curve2D" id="Curve2D_7utke"]
 _data = {
-"points": PackedVector2Array(-0.253536, -76.6656, 0.253536, 76.6656, 120, 347, -79.0729, 0.988353, 79.0729, -0.988353, 312, 824, 2.1205, 125.402, -2.1205, -125.402, 467, 346)
+"points": PackedVector2Array(-0.253536, -76.6656, 0.253536, 76.6656, 120, 347, -79.0729, 0.988353, 79.0729, -0.988353, 312, 824, 1.2405, 140.362, -1.2405, -140.362, 565, 657, -9.68, 160.16, 9.68, -160.16, 462, 384)
 }
-point_count = 3
+point_count = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cppxt"]
+shader = ExtResource("3_ynme6")
+shader_parameter/x = 2.085
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sb1ul"]
+shader = ExtResource("3_ynme6")
+shader_parameter/x = 0.3
 
 [node name="SkillTree" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -23.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7utke")
@@ -23,42 +35,90 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "Level: 1"
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="EvenlyDistributedPath" type="Path2D" parent="."]
 position = Vector2(214, -130)
 curve = SubResource("Curve2D_7utke")
+script = ExtResource("2_qyvaf")
 metadata/Comment = "Experimenting with PathFollow2D; doesn't quite work how I'd like, will need my own tool/automation, EvenlySpacedPath"
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(120, 347)
 rotation = 1.56749
 rotates = false
 
-[node name="Polygon2D" type="Polygon2D" parent="Path2D/PathFollow2D"]
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D"]
+color = Color(0, 1, 1, 1)
 polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
 
-[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
-position = Vector2(157.699, 523.943)
+[node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D"]
+material = SubResource("ShaderMaterial_cppxt")
+offset_left = -21.9304
+offset_top = -21.0726
+offset_right = 18.0696
+offset_bottom = 18.9274
+color = Color(0.409371, 0.409565, 0.405021, 1)
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(161.453, 536.757)
 rotation = 1.56749
-progress = 181.248
+progress = 194.601
 rotates = false
 
-[node name="Polygon2D" type="Polygon2D" parent="Path2D/PathFollow2D2"]
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D3"]
+color = Color(1, 0, 1, 1)
 polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
 
-[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D"]
-position = Vector2(217.347, 695.565)
+[node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(227.911, 719.501)
 rotation = 1.56749
-progress = 363.041
+scale = Vector2(1, 1)
+progress = 389.202
 rotates = false
 
-[node name="Polygon2D" type="Polygon2D" parent="Path2D/PathFollow2D3"]
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D5"]
+color = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
 
-[node name="PathFollow2D4" type="PathFollow2D" parent="Path2D"]
-position = Vector2(389.873, 722.351)
+[node name="PathFollow2D7" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(367.395, 819.915)
 rotation = 1.56749
-progress = 661.671
+scale = Vector2(1, 1)
+progress = 583.803
 rotates = false
 
-[node name="Polygon2D" type="Polygon2D" parent="Path2D/PathFollow2D4"]
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D7"]
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(539.221, 739.425)
+rotation = 1.56749
+scale = Vector2(1, 1)
+progress = 778.404
+rotates = false
+
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D2"]
+material = SubResource("ShaderMaterial_sb1ul")
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
+uv = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
+
+[node name="PathFollow2D4" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(533.857, 557.06)
+rotation = 1.56749
+progress = 973.005
+rotates = false
+
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D4"]
+color = Color(0.759507, 0.18112, 0.214476, 1)
+polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
+
+[node name="PathFollow2D6" type="PathFollow2D" parent="EvenlyDistributedPath"]
+position = Vector2(462, 384)
+rotation = 1.56749
+progress = 1167.61
+rotates = false
+
+[node name="Polygon2D" type="Polygon2D" parent="EvenlyDistributedPath/PathFollow2D6"]
+color = Color(0.141322, 0.0156885, 0.183284, 1)
 polygon = PackedVector2Array(-13.1289, 38.9568, 30.9138, 26.1024, 31.0891, -26.8973, -11.8643, -41.0395, -38.0031, 0.874329)
