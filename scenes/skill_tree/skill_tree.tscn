@@ -48,7 +48,8 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.409371, 0.409565, 0.405021, 1)
+color = Color(0.407843, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(161.453, 536.757)
@@ -57,9 +58,19 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D3"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(1, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(227.911, 719.501)
@@ -69,9 +80,19 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D5"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D7" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(367.395, 819.915)
@@ -81,9 +102,19 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D7"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(539.221, 739.425)
@@ -93,9 +124,19 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D2"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.547907, 0.509899, 0.488355, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152941, 0.231373, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D4" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(533.857, 557.06)
@@ -104,8 +145,17 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D4"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.759507, 0.18112, 0.214476, 1)
 
 [node name="PathFollow2D6" type="PathFollow2D" parent="EvenlyDistributedPath"]
@@ -115,6 +165,15 @@ rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D6"]
 material = ExtResource("3_ynme6")
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.141322, 0.0156885, 0.183284, 1)
