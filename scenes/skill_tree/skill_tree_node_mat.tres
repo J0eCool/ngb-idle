@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cbap30dty77g"]
+
+[ext_resource type="Shader" uid="uid://dcc4kt3p1sg3m" path="res://scenes/skill_tree/skill_tree_node.gdshader" id="1_k4dil"]
+
+[resource]
+shader = ExtResource("1_k4dil")
+shader_parameter/N = 5
