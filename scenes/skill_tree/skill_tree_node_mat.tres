@@ -4,5 +4,10 @@
 
 [resource]
 shader = ExtResource("1_k4dil")
-shader_parameter/N = 5
+shader_parameter/N = 8
 shader_parameter/rotation_deg = 90.0
+shader_parameter/edge_brightness = 0.52
+shader_parameter/edge_width = 0.435
+shader_parameter/edge_color = Color(0, 0, 0, 0.45098)
+shader_parameter/ridge = 0.595
+shader_parameter/ridge_depth = 0.545

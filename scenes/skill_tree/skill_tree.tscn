@@ -6,9 +6,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_7utke"]
 _data = {
-"points": PackedVector2Array(-0.253536, -76.6656, 0.253536, 76.6656, 120, 347, -79.0729, 0.988353, 79.0729, -0.988353, 312, 824, 1.2405, 140.362, -1.2405, -140.362, 565, 657, -9.68, 160.16, 9.68, -160.16, 462, 384)
+"points": PackedVector2Array(95.5785, 50.0456, -95.5785, -50.0456, 436, 655, -104.875, -5.34393, 104.875, 5.34393, 435, 798, 134.341, 103.094, -134.341, -103.094, 511, 514)
 }
-point_count = 4
+point_count = 3
 
 [node name="SkillTree" type="Control"]
 layout_mode = 3
@@ -26,13 +26,13 @@ offset_bottom = 23.0
 text = "Level: 1"
 
 [node name="EvenlyDistributedPath" type="Path2D" parent="."]
-position = Vector2(227, -289)
+position = Vector2(227, -335)
 curve = SubResource("Curve2D_7utke")
 script = ExtResource("2_qyvaf")
 metadata/Comment = "Experimenting with PathFollow2D; doesn't quite work how I'd like, will need my own tool/automation, EvenlySpacedPath"
 
 [node name="PathFollow2D" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(120, 347)
+position = Vector2(436, 655)
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D"]
@@ -42,18 +42,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.407843, 1, 1, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(161.453, 536.757)
-progress = 194.601
+position = Vector2(361.24, 695.31)
+progress = 104.148
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D3"]
@@ -63,19 +62,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 1, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(227.911, 719.501)
+position = Vector2(398.621, 786.817)
 scale = Vector2(1, 1)
-progress = 389.202
+progress = 208.295
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D5"]
@@ -85,19 +83,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D7" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(367.395, 819.915)
+position = Vector2(497.003, 779.82)
 scale = Vector2(1, 1)
-progress = 583.803
+progress = 312.443
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D7"]
@@ -107,19 +104,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(539.221, 739.425)
+position = Vector2(561.396, 699.962)
 scale = Vector2(1, 1)
-progress = 778.404
+progress = 416.591
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D2"]
@@ -129,18 +125,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.152941, 0.231373, 1, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D4" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(533.857, 557.06)
-progress = 973.005
+position = Vector2(569.384, 597.942)
+progress = 520.738
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D4"]
@@ -150,17 +145,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.759507, 0.18112, 0.214476, 1)
 
 [node name="PathFollow2D6" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(462, 384)
-progress = 1167.61
+position = Vector2(511, 514)
+progress = 624.886
 rotates = false
 
 [node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D6"]
@@ -170,10 +165,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.141322, 0.0156885, 0.183284, 1)
