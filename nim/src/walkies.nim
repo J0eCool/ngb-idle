@@ -4,16 +4,19 @@ import gdext/classes/[
   gdCharacterBody2d,
   gdInputEvent,
   gdNode2D,
+  gdSceneTree,
 ]
 
 type Walkies* = ptr object of Node2D
   spd* {.gdexport.}: float = 500
   boundLo* {.gdexport.}: float = 128
   boundHi* {.gdexport.}: float = 1024
+  scene* {.gdexport.}: gdref PackedScene
 
   player: CharacterBody2D
   anim: AnimationPlayer
-  dx: int
+  dx: int = 0
+  adoorable: bool = false # if you can enter door
 
 
 method ready(self: Walkies) {.gdsync.} =
@@ -43,8 +46,11 @@ method input(self: Walkies, event: GdRef[InputEvent]) {.gdsync.} =
   if event[].isActionReleased("left") or event[].isActionReleased("right"):
     self.dx = 0
 
+  if self.adoorable and event[].is_action_pressed("enter"):
+    discard self.get_tree().changeSceneToPacked(self.scene)
+
 
 proc on_body_entered(self: Walkies) {.gdsync, name: "_on_body_entered".} =
-  print("HEY, ENTERED")
+  self.adoorable = true
 proc on_body_exited(self: Walkies) {.gdsync, name: "_on_body_exited".} =
-  print("aw, they left...")
+  self.adoorable = false

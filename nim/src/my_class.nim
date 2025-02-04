@@ -14,7 +14,7 @@ method ready(self: MyClass) {.gdsync.} =
   #self.label_node.text if class were different node type
   self.text = "Listen up, buttercup"
 
-method input(self: MyClass, event: GdRef[InputEvent]) {.gdsync.} =
+method input(self: MyClass, event: gdref InputEvent) {.gdsync.} =
   if event[].is_action_pressed("up"):
     self.text = "uppies"
   elif event[].is_action_pressed("down"):

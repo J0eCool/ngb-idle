@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6dg78k126cuk"]
+[gd_scene load_steps=15 format=3 uid="uid://c6dg78k126cuk"]
 
 [ext_resource type="Texture2D" uid="uid://5qlwbcyled3j" path="res://assets/doodlesprites/doodlesprites_01.tres" id="1_2h071"]
+[ext_resource type="PackedScene" uid="uid://d60frdoiqqjh" path="res://scenes/skill_tree/skill_tree.tscn" id="1_h4mlv"]
 [ext_resource type="Texture2D" uid="uid://bhhwn057oiu8b" path="res://assets/doodlesprites/doodlesprites_03.tres" id="2_ee2j8"]
 [ext_resource type="Texture2D" uid="uid://bs3wvn62pyi0a" path="res://assets/doodlesprites/doodlesprites_02.tres" id="3_a2fma"]
 [ext_resource type="Texture2D" uid="uid://ctn61vl6aapal" path="res://assets/doodlesprites/doodlesprites_04.tres" id="4_5ce5i"]
@@ -74,7 +75,8 @@ size = Vector2(44.7246, 37.2951)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5n37"]
 size = Vector2(307, 244)
 
-[node name="main" type="Walkies"]
+[node name="Walkies" type="Walkies"]
+scene = ExtResource("1_h4mlv")
 
 [node name="Background" type="Node2D" parent="."]
 

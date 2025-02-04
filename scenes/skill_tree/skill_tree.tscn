@@ -51,7 +51,7 @@ grow_vertical = 2
 color = Color(0.407843, 1, 1, 1)
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(361.24, 695.31)
+position = Vector2(361.239, 695.31)
 progress = 104.148
 rotates = false
 
@@ -71,8 +71,7 @@ grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(398.621, 786.817)
-scale = Vector2(1, 1)
+position = Vector2(398.62, 786.817)
 progress = 208.295
 rotates = false
 
@@ -92,8 +91,7 @@ grow_vertical = 2
 color = Color(1, 1, 0, 1)
 
 [node name="PathFollow2D7" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(497.003, 779.82)
-scale = Vector2(1, 1)
+position = Vector2(497.003, 779.821)
 progress = 312.443
 rotates = false
 
@@ -114,7 +112,6 @@ color = Color(0, 1, 0, 1)
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(561.396, 699.962)
-scale = Vector2(1, 1)
 progress = 416.591
 rotates = false
 
@@ -134,7 +131,7 @@ grow_vertical = 2
 color = Color(0.152941, 0.231373, 1, 1)
 
 [node name="PathFollow2D4" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(569.384, 597.942)
+position = Vector2(569.385, 597.943)
 progress = 520.738
 rotates = false
 

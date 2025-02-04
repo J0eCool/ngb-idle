@@ -1,6 +1,6 @@
 import gdext
 import gdext/classes/[
-  gdControl,
+  # gdControl,
 ]
 
 type
@@ -34,3 +34,4 @@ type
     name: string
 
   Inventory* = ptr object of Control
+    items: seq[Item]

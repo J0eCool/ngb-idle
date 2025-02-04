@@ -2,7 +2,6 @@ shader_type canvas_item;
 
 uniform int N = 5;
 uniform float rotation_deg = 90;
-uniform float edge_brightness = 0.75;
 uniform float edge_width = 0.5;
 uniform vec4 edge_color: source_color = vec4(1);
 uniform float ridge = 0.65;
@@ -34,14 +33,14 @@ void fragment() {
 	}
 	
 	// draw ridges
-	float w = edge_width / 10.0 / float(N);
+	float w = edge_width / 5.0 / float(N);
 	bool on_ridge = abs(dist - ridge) < w;
 	bool on_edge = dist >= ridge && dist*min(abs(p-a), abs(p-b)) < w;
 	if (on_ridge || on_edge) {
 		COLOR.rgb = mix(COLOR.rgb, edge_color.rgb, edge_color.a);
 	}
 	if (dist >= ridge) {
-		float t = (1.0-dist)/(1.0-ridge);
-		COLOR.rgb *= mix(1.0, 1.0-ridge_depth, 1.0-t);
+		float t = (dist-ridge)/(1.0-ridge);
+		COLOR.rgb *= mix(1.0, 1.0-ridge_depth, t);
 	}
 }
