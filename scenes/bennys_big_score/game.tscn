@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://g1y8oevtan46"]
+
+[ext_resource type="PackedScene" uid="uid://4b6cmqgymdwv" path="res://third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/fbx/Floor_Prototype.fbx" id="1_01u4g"]
+[ext_resource type="PackedScene" uid="uid://brphrvfoc53m5" path="res://scenes/bennys_big_score/rogue.tscn" id="2_4uwar"]
+
+[sub_resource type="Environment" id="Environment_01u4g"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 0.733333, 1)
+ambient_light_sky_contribution = 0.15
+ambient_light_energy = 0.05
+fog_light_color = Color(0.517647, 0.552941, 0.827451, 1)
+volumetric_fog_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Floor_Prototype" parent="." instance=ExtResource("1_01u4g")]
+
+[node name="Rogue" parent="." instance=ExtResource("2_4uwar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.840802, -0.35356, 0.409936, -0.0233128, 0.732907, 0.679929, -0.540841, -0.581243, 0.607987, 1.5116, 3.33331, 3.33398)
+environment = SubResource("Environment_01u4g")
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.711511, 0.510495, -0.482853, 0, 0.687164, 0.726503, 0.702675, -0.516915, 0.488925, -2.43988, 3.66052, 2.29651)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.3

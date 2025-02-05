@@ -12,13 +12,13 @@ void fragment() {
 	vec2 P = 2.0*UV - 1.0; // normalize to [-1,1] coordinates
 	float p = mod(atan(P.y, P.x) + TAU, TAU);
 	float angle = p + rot; // shift into [0, 2pi) range
-	
+
 	int seg = int(float(N)*angle/TAU); // segment index, [0,N)
 	float a = float(  seg)/float(N)*TAU - rot;
 	float b = float(seg+1)/float(N)*TAU - rot;
 	vec2 A = vec2(cos(a), sin(a));
 	vec2 B = vec2(cos(b), sin(b));
-	
+
 	// project P onto AB, find corresponding point D
 	// P is in tri iff DP points toward origin
 	vec2 AP = P - A;
@@ -31,7 +31,7 @@ void fragment() {
 	if (dot(P, DP) >= 0.0) {
 		discard;
 	}
-	
+
 	// draw ridges
 	float w = edge_width / 5.0 / float(N);
 	bool on_ridge = abs(dist - ridge) < w;

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cks8wr125mbbc"
+path="res://.godot/imported/Primitive_Floor_Hole.obj-ef03a044a9173ff9625694e899b7abee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Floor_Hole.obj-ef03a044a9173ff9625694e899b7abee.mesh"]
+
+source_file="res://third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/obj/Primitive_Floor_Hole.obj"
+dest_files=["res://.godot/imported/Primitive_Floor_Hole.obj-ef03a044a9173ff9625694e899b7abee.mesh", "res://.godot/imported/Primitive_Floor_Hole.obj-ef03a044a9173ff9625694e899b7abee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
