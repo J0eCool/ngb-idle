@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "design/Benny's Big Score.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Benny's Big Score"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "design/Benny's Big Score.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for Benny's Big Score"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "design/Benny's Big Score.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from Benny's Big Score"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "design/Benny's Big Score.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Benny's Big Score"
             }
           }
         ]
@@ -162,31 +162,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1422233148ac2b45",
+  "active": "c7959946aea0f1f5",
   "lastOpenFiles": [
-    "scenes/bennys_big_score/rogue.tscn120525972103.tmp",
-    "scenes/bennys_big_score/rogue.tscn120465196292.tmp",
-    "scenes/bennys_big_score/rogue.tscn120110091792.tmp",
-    "scenes/bennys_big_score/rogue.tscn120104781090.tmp",
-    "scenes/bennys_big_score/rogue.tscn119627746749.tmp",
-    "scenes/bennys_big_score/rogue.tscn119548401649.tmp",
-    "scenes/bennys_big_score/game.tscn",
-    "scenes/bennys_big_score/game.tscn119547894426.tmp",
-    "scenes/bennys_big_score/rogue.tscn119469074903.tmp",
-    "scenes/walkies.tscn119468735507.tmp",
-    "scenes/bennys_big_score/rogue.tscn119467342128.tmp",
-    "third_party/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png",
-    "third_party/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian_barbarian_texture.png",
-    "third_party/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png",
-    "third_party/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_rogue_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/textures/prototypebits_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/obj/prototypebits_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/gltf/prototypebits_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/fbx(unity)/prototypebits_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/fbx/prototypebits_texture.png",
-    "third_party/KayKit_Prototype_Bits_1.0_FREE/sample.png",
-    "scenes/skill_tree/Skill Tree Prototype.md",
+    "scenes/bennys_big_score/rogue.tscn638854012358.tmp",
+    "scenes/bennys_big_score/game.tscn638853560640.tmp",
+    "scenes/walkies.tscn638853494330.tmp",
+    "scenes/bennys_big_score/rogue.tscn427958014044.tmp",
+    "scenes/bennys_big_score/game.tscn427957547409.tmp",
+    "design/Root.md",
+    "design/Benny's Big Score.md",
     "README.md",
+    "scenes/bennys_big_score/rogue.tscn275106616695.tmp",
+    "scenes/bennys_big_score/game.tscn275106555335.tmp",
+    "scenes/walkies.tscn275106128749.tmp",
+    "design/scratch.ods",
+    "design",
+    "New folder",
+    "addons/ridiculous_coding/images/undo.png",
+    "addons/ridiculous_coding/images/under.png",
+    "addons/ridiculous_coding/images/settings.png",
+    "addons/ridiculous_coding/images/reset.png",
+    "addons/ridiculous_coding/images/progress.png",
+    "addons/ridiculous_coding/images/newline.png",
+    "addons/ridiculous_coding/images/levelUp.png",
+    "addons/ridiculous_coding/images/information-sign.png",
+    "addons/ridiculous_coding/images/chat-info.png",
+    "addons/ridiculous_coding/images/boom.png",
+    "LICENSE.md",
+    "scenes/skill_tree/Skill Tree Prototype.md",
     "Untitled.md"
   ]
 }

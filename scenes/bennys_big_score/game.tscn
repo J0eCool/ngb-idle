@@ -13,8 +13,6 @@ volumetric_fog_enabled = true
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Floor_Prototype" parent="." instance=ExtResource("1_01u4g")]
-
 [node name="Rogue" parent="." instance=ExtResource("2_4uwar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
@@ -27,3 +25,32 @@ current = true
 transform = Transform3D(0.711511, 0.510495, -0.482853, 0, 0.687164, 0.726503, 0.702675, -0.516915, 0.488925, -2.43988, 3.66052, 2.29651)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.3
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Floor_Prototype" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(0.999998, -0.00197222, 0, 0.00197222, 0.999998, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Floor_Prototype2" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Floor_Prototype3" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Floor_Prototype4" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Floor_Prototype5" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="Floor_Prototype6" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="Floor_Prototype7" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Floor_Prototype8" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="Floor_Prototype9" parent="Floor" instance=ExtResource("1_01u4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)

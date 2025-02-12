@@ -1,5 +1,7 @@
-# Godot 4+ specific ignores
 .godot/
 lib/
 nimble.develop
 nimble.paths
+
+# LibreOffice lockfiles
+.~lock*.ods#

@@ -9,3 +9,5 @@ Build the Nim code with `gdextwiz build`
 Bosca Ceoil (Blue edition) for the `.ceol` files
 
 Krita for the `.kra` files
+
+`/design` folder made for Obsidian
