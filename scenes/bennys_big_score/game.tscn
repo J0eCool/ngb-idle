@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://g1y8oevtan46"]
 
 [ext_resource type="PackedScene" uid="uid://4b6cmqgymdwv" path="res://third_party/KayKit_Prototype_Bits_1.0_FREE/Assets/fbx/Floor_Prototype.fbx" id="1_01u4g"]
+[ext_resource type="Script" uid="uid://b4nusoerktiv2" path="res://scenes/bennys_big_score/game.gd" id="1_uptck"]
 [ext_resource type="PackedScene" uid="uid://brphrvfoc53m5" path="res://scenes/bennys_big_score/rogue_player.tscn" id="2_4uwar"]
-[ext_resource type="Script" path="res://scenes/bennys_big_score/rogue.gd" id="2_uptck"]
 
 [sub_resource type="Environment" id="Environment_01u4g"]
 ambient_light_source = 2
@@ -12,11 +12,11 @@ ambient_light_energy = 0.05
 fog_light_color = Color(0.517647, 0.552941, 0.827451, 1)
 volumetric_fog_enabled = true
 
-[node name="Node3D" type="Node3D"]
+[node name="BennysBigScore" type="Node3D"]
+script = ExtResource("1_uptck")
 
 [node name="RoguePlayer" parent="." instance=ExtResource("2_4uwar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-script = ExtResource("2_uptck")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.840802, -0.35356, 0.409936, -0.0233128, 0.732907, 0.679929, -0.540841, -0.581243, 0.607987, 1.5116, 3.33331, 3.33398)
@@ -56,3 +56,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 
 [node name="Floor_Prototype9" parent="Floor" instance=ExtResource("1_01u4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="Attack" type="Button" parent="."]
+offset_left = 903.0
+offset_top = 510.0
+offset_right = 1035.0
+offset_bottom = 560.0
+text = "ATTACK"
+
+[connection signal="button_down" from="Attack" to="." method="_on_attack_button_down"]
