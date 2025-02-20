@@ -1,6 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://u7c6yencnxoa"]
+[gd_scene load_steps=12 format=4 uid="uid://u7c6yencnxoa"]
 
 [ext_resource type="Texture2D" uid="uid://dgja770drmbly" path="res://assets/neon_tiles.png" id="1_rma28"]
+[ext_resource type="Texture2D" uid="uid://e57s5tgfdg37" path="res://assets/this_is_fine_meta.png" id="1_sborm"]
+[ext_resource type="Script" uid="uid://b6ej28mr6hlvr" path="res://scenes/coral_particle_spectacle/moves_erratically.gd" id="2_jiftx"]
+[ext_resource type="Texture2D" uid="uid://b8lyf113k8f78" path="res://assets/squiggle_thingus.png" id="4_26yv0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ewxy"]
 texture = ExtResource("1_rma28")
@@ -145,6 +148,15 @@ _data = {
 
 [node name="CoralSpectacle" type="Node2D"]
 
+[node name="ThisIsFineMeta" type="Sprite2D" parent="."]
+position = Vector2(824, 461)
+rotation = -0.37001
+texture = ExtResource("1_sborm")
+
+[node name="Node2D" type="Node2D" parent="ThisIsFineMeta"]
+script = ExtResource("2_jiftx")
+rotation_amount = 25.0
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAAYAAAAAAAAAAAACAAYAAAAEAAAAAAADAAYAAAABAAAAAAAEAAYAAAABAAAAAAAFAAYAAAAEAAAAAAAGAAYAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAAGAAAAAAAHAAgAAAAFAAIAAAAGAAgAAAAEAAIAAAAFAAgAAAABAAIAAAAEAAgAAAABAAIAAAADAAgAAAABAAIAAAACAAgAAAAEAAIAAAABAAgAAAAAAAIAAAABAAcAAAADAAEAAAAIAAUAAAADAAAAAAAIAAYAAAAHAAEAAAAIAAcAAAABAAIAAAAJAAUAAAAHAAEAAAAJAAYAAAABAAEAAAAJAAcAAAABAAIAAAAMAAUAAAABAAAAAAAMAAYAAAAEAAEAAAAMAAcAAAABAAIAAAANAAUAAAAFAAAAAAANAAYAAAACAAEAAAANAAcAAAACAAIAAAAKAAcAAAAEAAIAAAALAAcAAAABAAIAAAALAAUAAAAGAAEAAAAKAAUAAAAEAAEAAAACAAcAAAABAAEAAAADAAcAAAABAAEAAAAEAAcAAAAEAAEAAAAFAAcAAAABAAEAAAAGAAcAAAABAAEAAAALAAYAAAABAAEAAAAKAAQAAAABAAAAAAALAAQAAAACAAAAAAAJAAQAAAAAAAAAAAAKAAYAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_pnf8l")
@@ -201,3 +213,7 @@ rotation = 0.785398
 libraries = {
 &"": SubResource("AnimationLibrary_sborm")
 }
+
+[node name="SquiggleThingus" type="Sprite2D" parent="."]
+position = Vector2(655, 211)
+texture = ExtResource("4_26yv0")
