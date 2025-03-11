@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d60frdoiqqjh"]
+[gd_scene load_steps=6 format=3 uid="uid://d60frdoiqqjh"]
 
 [ext_resource type="Script" uid="uid://bkllijtao5ss4" path="res://scenes/skill_tree/skill_tree.gd" id="1_7utke"]
 [ext_resource type="Script" uid="uid://y5hxxdim33xe" path="res://scenes/skill_tree/evenly_distributed_path.gd" id="2_qyvaf"]
+[ext_resource type="PackedScene" uid="uid://i5blxb3by5dh" path="res://scenes/gem.tscn" id="3_cppxt"]
 [ext_resource type="Material" uid="uid://cbap30dty77g" path="res://scenes/skill_tree/skill_tree_node_mat.tres" id="3_ynme6"]
 
 [sub_resource type="Curve2D" id="Curve2D_7utke"]
@@ -35,20 +36,7 @@ metadata/Comment = "Experimenting with PathFollow2D; doesn't quite work how I'd 
 position = Vector2(436, 655)
 rotates = false
 
-[node name="ColorRect" type="ColorRect" parent="EvenlyDistributedPath/PathFollow2D"]
-material = ExtResource("3_ynme6")
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -30.0
-offset_right = 30.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.407843, 1, 1, 1)
+[node name="ColorRect" parent="EvenlyDistributedPath/PathFollow2D" instance=ExtResource("3_cppxt")]
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(361.239, 695.31)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://u7c6yencnxoa"]
+[gd_scene load_steps=13 format=4 uid="uid://u7c6yencnxoa"]
 
 [ext_resource type="Texture2D" uid="uid://dgja770drmbly" path="res://assets/neon_tiles.png" id="1_rma28"]
 [ext_resource type="Texture2D" uid="uid://e57s5tgfdg37" path="res://assets/this_is_fine_meta.png" id="1_sborm"]
 [ext_resource type="Script" uid="uid://b6ej28mr6hlvr" path="res://scenes/coral_particle_spectacle/moves_erratically.gd" id="2_jiftx"]
 [ext_resource type="Texture2D" uid="uid://b8lyf113k8f78" path="res://assets/squiggle_thingus.png" id="4_26yv0"]
+[ext_resource type="PackedScene" uid="uid://i5blxb3by5dh" path="res://scenes/gem.tscn" id="4_jiftx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ewxy"]
 texture = ExtResource("1_rma28")
@@ -149,11 +150,11 @@ _data = {
 [node name="CoralSpectacle" type="Node2D"]
 
 [node name="ThisIsFineMeta" type="Sprite2D" parent="."]
-position = Vector2(824, 461)
-rotation = -0.37001
+position = Vector2(824, 341)
+rotation = 0.560251
 texture = ExtResource("1_sborm")
 
-[node name="Node2D" type="Node2D" parent="ThisIsFineMeta"]
+[node name="MovesErratically" type="Node2D" parent="ThisIsFineMeta"]
 script = ExtResource("2_jiftx")
 rotation_amount = 25.0
 
@@ -161,58 +162,74 @@ rotation_amount = 25.0
 tile_map_data = PackedByteArray("AAABAAYAAAAAAAAAAAACAAYAAAAEAAAAAAADAAYAAAABAAAAAAAEAAYAAAABAAAAAAAFAAYAAAAEAAAAAAAGAAYAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAAGAAAAAAAHAAgAAAAFAAIAAAAGAAgAAAAEAAIAAAAFAAgAAAABAAIAAAAEAAgAAAABAAIAAAADAAgAAAABAAIAAAACAAgAAAAEAAIAAAABAAgAAAAAAAIAAAABAAcAAAADAAEAAAAIAAUAAAADAAAAAAAIAAYAAAAHAAEAAAAIAAcAAAABAAIAAAAJAAUAAAAHAAEAAAAJAAYAAAABAAEAAAAJAAcAAAABAAIAAAAMAAUAAAABAAAAAAAMAAYAAAAEAAEAAAAMAAcAAAABAAIAAAANAAUAAAAFAAAAAAANAAYAAAACAAEAAAANAAcAAAACAAIAAAAKAAcAAAAEAAIAAAALAAcAAAABAAIAAAALAAUAAAAGAAEAAAAKAAUAAAAEAAEAAAACAAcAAAABAAEAAAADAAcAAAABAAEAAAAEAAcAAAAEAAEAAAAFAAcAAAABAAEAAAAGAAcAAAABAAEAAAALAAYAAAABAAEAAAAKAAQAAAABAAAAAAALAAQAAAACAAAAAAAJAAQAAAAAAAAAAAAKAAYAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_pnf8l")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Stickman" type="CharacterBody2D" parent="."]
 position = Vector2(281, 286)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stickman"]
 shape = SubResource("CapsuleShape2D_rma28")
 
-[node name="Body" type="Node2D" parent="CharacterBody2D"]
+[node name="Body" type="Node2D" parent="Stickman"]
 
-[node name="Head" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="Head" type="ColorRect" parent="Stickman/Body"]
 offset_left = -9.0
 offset_top = -44.0
 offset_right = 8.0
 offset_bottom = -27.0
 
-[node name="Body" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="Body" type="ColorRect" parent="Stickman/Body"]
 offset_left = -2.0
 offset_top = -25.0
 offset_right = 1.0
 offset_bottom = 21.0
 
-[node name="R Arm" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="R Arm" type="ColorRect" parent="Stickman/Body"]
 offset_left = 2.0
 offset_top = -15.0
 offset_right = 5.0
 offset_bottom = 31.0
 rotation = -1.5708
 
-[node name="L Arm" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="L Arm" type="ColorRect" parent="Stickman/Body"]
 offset_left = -4.0
 offset_top = -18.0
 offset_right = -1.0
 offset_bottom = 28.0
 rotation = -4.71239
 
-[node name="R Leg" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="R Leg" type="ColorRect" parent="Stickman/Body"]
 offset_left = 2.00001
 offset_top = 23.0
 offset_right = 5.00001
 offset_bottom = 69.0
 rotation = -0.785169
 
-[node name="L Leg" type="ColorRect" parent="CharacterBody2D/Body"]
+[node name="L Leg" type="ColorRect" parent="Stickman/Body"]
 offset_left = -5.00001
 offset_top = 21.0
 offset_right = -2.00001
 offset_bottom = 67.0
 rotation = 0.785398
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stickman"]
 libraries = {
 &"": SubResource("AnimationLibrary_sborm")
 }
+
+[node name="Charges" type="Node2D" parent="Stickman"]
+
+[node name="ColorRect" parent="Stickman" instance=ExtResource("4_jiftx")]
+offset_left = -57.0
+offset_top = -66.0
+offset_right = -30.0
+offset_bottom = -39.0
+color = Color(0.709804, 0, 0, 1)
+
+[node name="ColorRect2" parent="Stickman" instance=ExtResource("4_jiftx")]
+offset_left = 10.0
+offset_top = -122.0
+offset_right = 37.0
+offset_bottom = -95.0
+color = Color(0.111641, 0.185486, 1, 1)
 
 [node name="SquiggleThingus" type="Sprite2D" parent="."]
 position = Vector2(655, 211)
