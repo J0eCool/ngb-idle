@@ -1,0 +1,150 @@
+[gd_scene load_steps=10 format=3 uid="uid://cc24x7spfa4p5"]
+
+[sub_resource type="SystemFont" id="SystemFont_rxxvn"]
+font_names = PackedStringArray("Cascadia Mono")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fk6py"]
+font = SubResource("SystemFont_rxxvn")
+font_size = 311
+font_color = Color(1, 0, 0, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_gw6e0"]
+font_names = PackedStringArray("Times New Roman")
+
+[sub_resource type="LabelSettings" id="LabelSettings_shqyv"]
+font = SubResource("SystemFont_gw6e0")
+font_size = 255
+font_color = Color(0, 0.396078, 0.623529, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_b3na5"]
+font_names = PackedStringArray("Cascadia Mono")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mo4pc"]
+font = SubResource("SystemFont_b3na5")
+font_size = 555
+font_color = Color(0, 1, 1, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m6ca0"]
+font = SubResource("SystemFont_b3na5")
+font_size = 414
+font_color = Color(1, 0, 1, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_t2t4y"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="LabelSettings" id="LabelSettings_gmx8c"]
+font = SubResource("SystemFont_t2t4y")
+font_size = 909
+font_color = Color(0.478431, 0, 0.815686, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 415.0
+offset_top = 182.0
+offset_right = 658.0
+offset_bottom = 665.0
+text = "e"
+label_settings = SubResource("LabelSettings_fk6py")
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 438.0
+offset_top = 633.0
+offset_right = 681.0
+offset_bottom = 1116.0
+rotation = 1.5708
+text = "a"
+label_settings = SubResource("LabelSettings_shqyv")
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 434.0
+offset_top = 687.0
+offset_right = 677.0
+offset_bottom = 1170.0
+rotation = 1.34846
+text = "c"
+label_settings = SubResource("LabelSettings_shqyv")
+
+[node name="Label10" type="Label" parent="."]
+offset_left = 491.0
+offset_top = 815.0
+offset_right = 734.0
+offset_bottom = 1298.0
+rotation = 1.57842
+text = "o"
+label_settings = SubResource("LabelSettings_shqyv")
+
+[node name="Label11" type="Label" parent="."]
+offset_left = 427.0
+offset_top = 936.0
+offset_right = 670.0
+offset_bottom = 1419.0
+rotation = 1.73983
+text = "b"
+label_settings = SubResource("LabelSettings_shqyv")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 641.0
+offset_top = 94.0
+offset_right = 966.0
+offset_bottom = 740.0
+rotation = 0.260328
+text = "C"
+label_settings = SubResource("LabelSettings_mo4pc")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 820.073
+offset_top = 299.0
+offset_right = 1063.07
+offset_bottom = 782.0
+rotation = 0.337802
+text = "o"
+label_settings = SubResource("LabelSettings_fk6py")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 801.073
+offset_top = 248.0
+offset_right = 1044.07
+offset_bottom = 731.0
+rotation = -0.33102
+text = "o"
+label_settings = SubResource("LabelSettings_fk6py")
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 1013.07
+offset_top = 133.0
+offset_right = 1256.07
+offset_bottom = 616.0
+rotation = 0.0149711
+text = "L"
+label_settings = SubResource("LabelSettings_fk6py")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 362.0
+offset_top = -86.0
+offset_right = 605.0
+offset_bottom = 397.0
+text = "0"
+label_settings = SubResource("LabelSettings_m6ca0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -11.0
+offset_top = -41.0
+offset_right = 534.0
+offset_bottom = 1169.0
+text = "J"
+label_settings = SubResource("LabelSettings_gmx8c")
