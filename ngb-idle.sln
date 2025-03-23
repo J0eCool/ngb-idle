@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ngb-idle", "ngb-idle.csproj", "{4582A213-3A2B-4B90-B482-3B13F876FC9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{4582A213-3A2B-4B90-B482-3B13F876FC9D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
