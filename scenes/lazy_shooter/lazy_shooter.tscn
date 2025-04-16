@@ -1,5 +1,13 @@
-[gd_scene format=3 uid="uid://dqpofi5fpkbpo"]
+[gd_scene load_steps=3 format=3 uid="uid://dqpofi5fpkbpo"]
+
+[ext_resource type="PackedScene" uid="uid://duwwfi2i0ta15" path="res://scenes/lazy_shooter/ship_controller.tscn" id="1_8ai52"]
+[ext_resource type="Script" uid="uid://8pp0bb6kx3jh" path="res://scenes/lazy_shooter/Lightning.cs" id="2_ixleb"]
 
 [node name="LazyShooter" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ShipController" parent="." instance=ExtResource("1_8ai52")]
+position = Vector2(999, 331)
+
+[node name="Lightning" type="Sprite2D" parent="."]
+position = Vector2(401, 291)
+script = ExtResource("2_ixleb")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://duwwfi2i0ta15"]
+
+[ext_resource type="Script" uid="uid://p6d75d27rkm3" path="res://scenes/lazy_shooter/ShipController.cs" id="1_pm7fd"]
+[ext_resource type="Texture2D" uid="uid://ntlof833u3b" path="res://assets/dr_octagonapus_blagh.png" id="2_20mdt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ruagw"]
+radius = 32.5576
+
+[node name="ShipController" type="CharacterBody2D"]
+script = ExtResource("1_pm7fd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -48)
+shape = SubResource("CircleShape2D_ruagw")
+
+[node name="Dr_Octagonapus" type="Sprite2D" parent="."]
+texture = ExtResource("2_20mdt")
