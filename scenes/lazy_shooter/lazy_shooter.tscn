@@ -1,13 +1,186 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqpofi5fpkbpo"]
+[gd_scene load_steps=5 format=3 uid="uid://dqpofi5fpkbpo"]
 
 [ext_resource type="PackedScene" uid="uid://duwwfi2i0ta15" path="res://scenes/lazy_shooter/ship_controller.tscn" id="1_8ai52"]
+[ext_resource type="Script" uid="uid://yvjfixiei6mq" path="res://scenes/lazy_shooter/lazy_shooter.gd" id="1_veqru"]
 [ext_resource type="Script" uid="uid://8pp0bb6kx3jh" path="res://scenes/lazy_shooter/Lightning.cs" id="2_ixleb"]
 
-[node name="LazyShooter" type="Node2D"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_veqru"]
+blend_mode = 1
+
+[node name="LazyShooter" type="Node2D" node_paths=PackedStringArray("lightnings")]
+script = ExtResource("1_veqru")
+lightnings = [NodePath("Strikes/Lightning"), NodePath("Strikes/Lightning2"), NodePath("Strikes/Lightning3"), NodePath("Strikes/Lightning4"), NodePath("Strikes/Lightning5"), NodePath("Strikes/Lightning6"), NodePath("Strikes/Lightning7"), NodePath("Strikes/Lightning8")]
 
 [node name="ShipController" parent="." instance=ExtResource("1_8ai52")]
-position = Vector2(999, 331)
+position = Vector2(932, 163)
 
-[node name="Lightning" type="Sprite2D" parent="."]
-position = Vector2(401, 291)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Strikes" type="Node2D" parent="."]
+
+[node name="Lightning" type="Sprite2D" parent="Strikes"]
+position = Vector2(347, 459)
+scale = Vector2(4, 4)
 script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning2" type="Sprite2D" parent="Strikes"]
+position = Vector2(241, 459)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning3" type="Sprite2D" parent="Strikes"]
+position = Vector2(147, 459)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning4" type="Sprite2D" parent="Strikes"]
+position = Vector2(56, 459)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning5" type="Sprite2D" parent="Strikes"]
+position = Vector2(370, 136)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning6" type="Sprite2D" parent="Strikes"]
+position = Vector2(264, 136)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning7" type="Sprite2D" parent="Strikes"]
+position = Vector2(170, 136)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning8" type="Sprite2D" parent="Strikes"]
+position = Vector2(79, 136)
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+Width = 64
+Height = 64
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Beam" type="Node2D" parent="."]
+position = Vector2(709, 453)
+
+[node name="Lightning9" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning10" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning11" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning12" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning13" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning14" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning15" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[node name="Lightning16" type="Sprite2D" parent="Beam"]
+modulate = Color(0.270588, 1, 1, 0.12549)
+material = SubResource("CanvasItemMaterial_veqru")
+rotation = 1.57079
+scale = Vector2(4, 4)
+script = ExtResource("2_ixleb")
+_xVariance = 45
+_yVariance = 45
+_gravity = 5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
