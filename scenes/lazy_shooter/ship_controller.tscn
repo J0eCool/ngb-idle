@@ -1,17 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://duwwfi2i0ta15"]
+[gd_scene load_steps=7 format=3 uid="uid://duwwfi2i0ta15"]
 
-[ext_resource type="Script" uid="uid://p6d75d27rkm3" path="res://scenes/lazy_shooter/ShipController.cs" id="1_pm7fd"]
+[ext_resource type="Script" uid="uid://cd8gw5kvhll4y" path="res://scenes/lazy_shooter/ship_controller.gd" id="1_pm7fd"]
 [ext_resource type="Texture2D" uid="uid://ntlof833u3b" path="res://assets/dr_octagonapus_blagh.png" id="2_20mdt"]
+[ext_resource type="Script" uid="uid://dirlt5edooy4c" path="res://scenes/lazy_shooter/repeat_shooter.gd" id="3_20mdt"]
+[ext_resource type="PackedScene" uid="uid://cv3hyndightc2" path="res://scenes/lazy_shooter/bullet.tscn" id="4_ruagw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ruagw"]
-radius = 32.5576
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ruagw"]
+radius = 30.0
+height = 166.0
+
+[sub_resource type="Curve2D" id="Curve2D_pm7fd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6, -8, 0, 0, 0, 0, 112, -44)
+}
+point_count = 2
 
 [node name="ShipController" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 25
 script = ExtResource("1_pm7fd")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -48)
-shape = SubResource("CircleShape2D_ruagw")
+move_speed = 335.0
 
 [node name="Dr_Octagonapus" type="Sprite2D" parent="."]
 texture = ExtResource("2_20mdt")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_ruagw")
+
+[node name="RepeatShooter" type="Node2D" parent="."]
+script = ExtResource("3_20mdt")
+bullet_scene = ExtResource("4_ruagw")
+
+[node name="BulletPath" type="Path2D" parent="RepeatShooter"]
+curve = SubResource("Curve2D_pm7fd")
