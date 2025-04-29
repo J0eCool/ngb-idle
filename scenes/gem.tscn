@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://cbap30dty77g" path="res://scenes/skill_tree/skill_tree_node_mat.tres" id="1_5cxma"]
 
-[node name="ColorRect" type="ColorRect"]
+[node name="Gem" type="ColorRect"]
 material = ExtResource("1_5cxma")
 anchors_preset = 8
 anchor_left = 0.5

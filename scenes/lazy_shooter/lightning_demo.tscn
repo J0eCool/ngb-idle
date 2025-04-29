@@ -7,9 +7,8 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_veqru"]
 blend_mode = 1
 
-[node name="LazyShooter" type="Node2D" node_paths=PackedStringArray("lightnings")]
+[node name="LazyShooter" type="Node2D"]
 script = ExtResource("1_wuh2w")
-lightnings = [NodePath("Strikes/Lightning"), NodePath("Strikes/Lightning2"), NodePath("Strikes/Lightning3"), NodePath("Strikes/Lightning4"), NodePath("Strikes/Lightning5"), NodePath("Strikes/Lightning6"), NodePath("Strikes/Lightning7"), NodePath("Strikes/Lightning8")]
 
 [node name="ShipController" parent="." instance=ExtResource("2_r3lrr")]
 position = Vector2(932, 163)
@@ -26,9 +25,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning2" type="Sprite2D" parent="Strikes"]
 position = Vector2(241, 459)
@@ -36,9 +36,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning3" type="Sprite2D" parent="Strikes"]
 position = Vector2(147, 459)
@@ -46,9 +47,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning4" type="Sprite2D" parent="Strikes"]
 position = Vector2(56, 459)
@@ -56,9 +58,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning5" type="Sprite2D" parent="Strikes"]
 position = Vector2(370, 136)
@@ -66,9 +69,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning6" type="Sprite2D" parent="Strikes"]
 position = Vector2(264, 136)
@@ -76,9 +80,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning7" type="Sprite2D" parent="Strikes"]
 position = Vector2(170, 136)
@@ -86,9 +91,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning8" type="Sprite2D" parent="Strikes"]
 position = Vector2(79, 136)
@@ -96,9 +102,10 @@ scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
 Width = 64
 Height = 64
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Beam" type="Node2D" parent="."]
 position = Vector2(709, 453)
@@ -109,9 +116,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning10" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -119,9 +127,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning11" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -129,9 +138,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning12" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -139,9 +149,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning13" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -149,9 +160,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning14" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -159,9 +171,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning15" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -169,9 +182,10 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [node name="Lightning16" type="Sprite2D" parent="Beam"]
 modulate = Color(0.270588, 1, 1, 0.12549)
@@ -179,8 +193,9 @@ material = SubResource("CanvasItemMaterial_veqru")
 rotation = 1.57079
 scale = Vector2(4, 4)
 script = ExtResource("3_22ve0")
-_xVariance = 45
-_yVariance = 45
-_gravity = 5
+_xVariance = 35
+_yVariance = 25
+_gravity = 25
+_centerVariance = 0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

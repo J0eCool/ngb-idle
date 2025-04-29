@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d60frdoiqqjh"]
+[gd_scene load_steps=7 format=3 uid="uid://d60frdoiqqjh"]
 
 [ext_resource type="Script" uid="uid://bkllijtao5ss4" path="res://scenes/skill_tree/skill_tree.gd" id="1_7utke"]
 [ext_resource type="Script" uid="uid://y5hxxdim33xe" path="res://scenes/skill_tree/evenly_distributed_path.gd" id="2_qyvaf"]
+[ext_resource type="PackedScene" uid="uid://dqpofi5fpkbpo" path="res://scenes/lazy_shooter/lazy_shooter.tscn" id="2_sb1ul"]
 [ext_resource type="PackedScene" uid="uid://i5blxb3by5dh" path="res://scenes/gem.tscn" id="3_cppxt"]
 [ext_resource type="Material" uid="uid://cbap30dty77g" path="res://scenes/skill_tree/skill_tree_node_mat.tres" id="3_ynme6"]
 
@@ -19,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7utke")
+scene = ExtResource("2_sb1ul")
 
 [node name="Level" type="Label" parent="."]
 layout_mode = 0
@@ -39,6 +41,14 @@ position = Vector2(436, 655)
 rotates = false
 
 [node name="ColorRect" parent="EvenlyDistributedPath/PathFollow2D" instance=ExtResource("3_cppxt")]
+
+[node name="Button" type="Button" parent="EvenlyDistributedPath/PathFollow2D/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="EvenlyDistributedPath"]
 position = Vector2(361.239, 695.31)
@@ -61,7 +71,7 @@ grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(398.621, 786.818)
+position = Vector2(398.62, 786.817)
 progress = 208.296
 rotates = false
 
@@ -159,3 +169,5 @@ offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.141322, 0.0156885, 0.183284, 1)
+
+[connection signal="pressed" from="EvenlyDistributedPath/PathFollow2D/ColorRect/Button" to="." method="_on_button_pressed"]
