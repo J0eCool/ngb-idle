@@ -1,16 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc4yeb11pvsja"]
+[gd_scene load_steps=7 format=3 uid="uid://bc4yeb11pvsja"]
 
 [ext_resource type="Script" uid="uid://bfbfnrl8esvef" path="res://scenes/line_fighter/line_fighter.gd" id="1_dsgmb"]
-[ext_resource type="Texture2D" uid="uid://3u6vxggtomcl" path="res://assets/token_e.png" id="1_t5nx4"]
+[ext_resource type="PackedScene" uid="uid://bc61rsb3xf328" path="res://scenes/line_fighter/enemy.tscn" id="2_2wimk"]
 [ext_resource type="Texture2D" uid="uid://dhspntpnot0uu" path="res://assets/token_h.png" id="2_dsgmb"]
+[ext_resource type="Texture2D" uid="uid://m8k62ykt6iao" path="res://assets/gate.png" id="5_7wpf4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wimk"]
 radius = 31.0161
+
+[sub_resource type="LabelSettings" id="LabelSettings_2wimk"]
+font_size = 24
 
 [node name="LineFighter" type="Node2D"]
 script = ExtResource("1_dsgmb")
 knockback = 200
 accel = 250
+enemy_scene = ExtResource("2_2wimk")
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(93, 401)
@@ -18,7 +23,7 @@ points = PackedVector2Array(0, 0, 1000, 0)
 width = 12.0
 
 [node name="Hero" type="Area2D" parent="."]
-position = Vector2(454, 354)
+position = Vector2(151, 354)
 
 [node name="TokenH" type="Sprite2D" parent="Hero"]
 texture = ExtResource("2_dsgmb")
@@ -26,13 +31,23 @@ texture = ExtResource("2_dsgmb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hero"]
 shape = SubResource("CircleShape2D_2wimk")
 
-[node name="Enemy" type="Area2D" parent="." groups=["enemy"]]
-position = Vector2(766, 354)
+[node name="Gate" type="Area2D" parent="." groups=["gateway"]]
+position = Vector2(1026, 354)
 
-[node name="TokenE" type="Sprite2D" parent="Enemy"]
-texture = ExtResource("1_t5nx4")
+[node name="Gate" type="Sprite2D" parent="Gate"]
+texture = ExtResource("5_7wpf4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate"]
 shape = SubResource("CircleShape2D_2wimk")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 101.0
+offset_top = 418.0
+offset_right = 171.0
+offset_bottom = 441.0
+text = "Level: {0}"
+label_settings = SubResource("LabelSettings_2wimk")
 
 [connection signal="area_entered" from="Hero" to="." method="_on_hero_area_entered"]
