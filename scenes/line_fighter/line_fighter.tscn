@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc4yeb11pvsja"]
+
+[ext_resource type="Texture2D" uid="uid://3u6vxggtomcl" path="res://assets/token_e.png" id="1_t5nx4"]
+[ext_resource type="Texture2D" uid="uid://dhspntpnot0uu" path="res://assets/token_h.png" id="2_dsgmb"]
+
+[node name="LineFighter" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(93, 401)
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 12.0
+
+[node name="TokenE" type="Sprite2D" parent="."]
+position = Vector2(852, 355)
+texture = ExtResource("1_t5nx4")
+
+[node name="TokenH" type="Sprite2D" parent="."]
+position = Vector2(454, 354)
+texture = ExtResource("2_dsgmb")
