@@ -1,19 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc4yeb11pvsja"]
+[gd_scene load_steps=5 format=3 uid="uid://bc4yeb11pvsja"]
 
+[ext_resource type="Script" uid="uid://bfbfnrl8esvef" path="res://scenes/line_fighter/line_fighter.gd" id="1_dsgmb"]
 [ext_resource type="Texture2D" uid="uid://3u6vxggtomcl" path="res://assets/token_e.png" id="1_t5nx4"]
 [ext_resource type="Texture2D" uid="uid://dhspntpnot0uu" path="res://assets/token_h.png" id="2_dsgmb"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2wimk"]
+radius = 31.0161
+
 [node name="LineFighter" type="Node2D"]
+script = ExtResource("1_dsgmb")
+knockback = 200
+accel = 250
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(93, 401)
 points = PackedVector2Array(0, 0, 1000, 0)
 width = 12.0
 
-[node name="TokenE" type="Sprite2D" parent="."]
-position = Vector2(852, 355)
+[node name="Hero" type="Area2D" parent="."]
+position = Vector2(454, 354)
+
+[node name="TokenH" type="Sprite2D" parent="Hero"]
+texture = ExtResource("2_dsgmb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hero"]
+shape = SubResource("CircleShape2D_2wimk")
+
+[node name="Enemy" type="Area2D" parent="." groups=["enemy"]]
+position = Vector2(766, 354)
+
+[node name="TokenE" type="Sprite2D" parent="Enemy"]
 texture = ExtResource("1_t5nx4")
 
-[node name="TokenH" type="Sprite2D" parent="."]
-position = Vector2(454, 354)
-texture = ExtResource("2_dsgmb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_2wimk")
+
+[connection signal="area_entered" from="Hero" to="." method="_on_hero_area_entered"]
