@@ -14,7 +14,6 @@ font_size = 24
 [node name="LineFighter" type="Node2D"]
 script = ExtResource("1_dsgmb")
 knockback = 200
-accel = 250
 enemy_scene = ExtResource("2_2wimk")
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -42,12 +41,28 @@ shape = SubResource("CircleShape2D_2wimk")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Label" type="Label" parent="."]
+[node name="Floor" type="Label" parent="."]
 offset_left = 101.0
 offset_top = 418.0
 offset_right = 171.0
 offset_bottom = 441.0
-text = "Level: {0}"
+text = "Floor: {0}"
 label_settings = SubResource("LabelSettings_2wimk")
 
+[node name="ToTown" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 23.0
+offset_right = 98.0
+offset_bottom = 77.0
+text = "Back to
+Town"
+
+[node name="XP" type="Label" parent="."]
+offset_left = 119.0
+offset_top = 39.0
+offset_right = 169.0
+offset_bottom = 62.0
+text = "XP: {0}"
+
 [connection signal="area_entered" from="Hero" to="." method="_on_hero_area_entered"]
+[connection signal="pressed" from="ToTown" to="." method="_on_to_town_pressed"]

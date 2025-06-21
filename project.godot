@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="ngb-idle"
-run/main_scene="res://scenes/walkies.tscn"
+run/main_scene="uid://bc4yeb11pvsja"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerStats="*res://player_stats.gd"
 
 [dotnet]
 

@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://owwgmeu6dsor"]
+
+[ext_resource type="Script" uid="uid://ycti3vjvg8j4" path="res://scenes/line_fighter/town.gd" id="1_qd78t"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qd78t")
+
+[node name="ToTower" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "To the 
+Tower"
+
+[node name="XP" type="Label" parent="."]
+layout_mode = 2
+text = "XP: {0}"
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 2
+
+[node name="Damage" type="Label" parent="Grid"]
+layout_mode = 2
+text = "Damage"
+
+[node name="BuyDamage" type="Button" parent="Grid"]
+layout_mode = 2
+text = "5xp"
+
+[node name="Speed" type="Label" parent="Grid"]
+layout_mode = 2
+text = "Damage"
+
+[node name="BuySpeed" type="Button" parent="Grid"]
+layout_mode = 2
+text = "5xp"
+
+[node name="Accel" type="Label" parent="Grid"]
+layout_mode = 2
+text = "Damage"
+
+[node name="BuyAccel" type="Button" parent="Grid"]
+layout_mode = 2
+text = "5xp"
+
+[connection signal="pressed" from="ToTower" to="." method="_on_to_tower_pressed"]
+[connection signal="pressed" from="Grid/BuyDamage" to="." method="_on_buy_damage_pressed"]

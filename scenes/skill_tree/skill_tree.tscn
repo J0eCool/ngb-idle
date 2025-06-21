@@ -71,7 +71,7 @@ grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="EvenlyDistributedPath"]
-position = Vector2(398.62, 786.817)
+position = Vector2(398.621, 786.818)
 progress = 208.296
 rotates = false
 
