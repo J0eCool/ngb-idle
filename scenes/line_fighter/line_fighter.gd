@@ -45,7 +45,7 @@ func _physics_process(dt: float) -> void:
 
 func _on_hero_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy"):
-		vel = -knockback
+		vel = -knockback - 2.5*(floor_level-1)
 		area.take_damage(PlayerStats.damage)
 		$XP.text = "XP: {0}".format([PlayerStats.xp])
 	elif area.is_in_group("gateway"):

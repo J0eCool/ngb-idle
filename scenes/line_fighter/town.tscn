@@ -50,3 +50,5 @@ text = "5xp"
 
 [connection signal="pressed" from="ToTower" to="." method="_on_to_tower_pressed"]
 [connection signal="pressed" from="Grid/BuyDamage" to="." method="_on_buy_damage_pressed"]
+[connection signal="pressed" from="Grid/BuySpeed" to="." method="_on_buy_speed_pressed"]
+[connection signal="pressed" from="Grid/BuyAccel" to="." method="_on_buy_accel_pressed"]
