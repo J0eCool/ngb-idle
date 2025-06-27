@@ -42,6 +42,10 @@ func _physics_process(dt: float) -> void:
 	vel += PlayerStats.accel*dt
 	vel = min(vel, PlayerStats.max_speed)
 	$Hero.position.x += vel*dt
+	if $Hero.position.x < spawn_point:
+		$Hero.position.x = spawn_point
+		vel = 0
+
 
 func _on_hero_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy"):
