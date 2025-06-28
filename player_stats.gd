@@ -1,7 +1,7 @@
 extends Node
 
-@export var damage = 4
-@export var max_speed = 200
-@export var accel = 250
+var damage = 4
+var max_speed = 200
+var accel = 250
 
-@export var xp = 0
+var xp = 0

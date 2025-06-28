@@ -13,7 +13,7 @@ var floor_level = 1 # would be `floor` if that wasn't taken by math
 
 func _ready() -> void:
 	start_floor()
-	$XP.text = "XP: {0}".format([PlayerStats.xp])
+	$XP.text = "XP: {0}".format([Util.format(PlayerStats.xp)])
 
 func start_floor() -> void:
 	$Hero.position.x = spawn_point
@@ -51,7 +51,7 @@ func _on_hero_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy"):
 		vel = -knockback - 2.5*(floor_level-1)
 		area.take_damage(PlayerStats.damage)
-		$XP.text = "XP: {0}".format([PlayerStats.xp])
+		$XP.text = "XP: {0}".format([Util.format(PlayerStats.xp)])
 	elif area.is_in_group("gateway"):
 		floor_level += 1
 		start_floor()

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PlayerStats="*res://player_stats.gd"
+Util="*res://util.gd"
 
 [dotnet]
 
@@ -25,14 +26,14 @@ project/assembly_name="ngb-idle"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-krita-importer/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-krita-importer/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://nim/": "red",
 "res://scenes/": "blue",
-"res://scenes/lazy_shooter/": "red"
+"res://scenes/line_fighter/": "yellow"
 }
 
 [global_group]

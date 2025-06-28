@@ -27,18 +27,18 @@ func accel_cost() -> int:
 
 func _process(_delta: float) -> void:
 	var xp = PlayerStats.xp
-	$XP.text = "XP: {0}".format([xp])
+	$XP.text = "XP: {0}".format([Util.format(xp)])
 	$Damage/Label.text = "Damage: {0}".format([PlayerStats.damage])
 	$Damage/BuySingle.text = "+{0}: {1}xp".format(
-		[damage_increment, damage_cost()])
+		[damage_increment, Util.format(damage_cost())])
 	$Damage/BuyBulk.text = "+{0}: {1}xp".format(
-		[bulk_damage_levels(xp/2), bulk_damage_cost(xp/2)])
-	$Speed/Label.text = "Max Speed: {0}".format([PlayerStats.max_speed])
+		[bulk_damage_levels(xp/2), Util.format(bulk_damage_cost(xp/2))])
+	$Speed/Label.text = "Max Speed: {0}".format([Util.format(PlayerStats.max_speed)])
 	$Speed/BuySingle.text = "+{0}: {1}xp".format(
-		[speed_increment, speed_cost()])
-	$Accel/Label.text = "Acceleration: {0}".format([PlayerStats.accel])
+		[speed_increment, Util.format(speed_cost())])
+	$Accel/Label.text = "Acceleration: {0}".format([Util.format(PlayerStats.accel)])
 	$Accel/BuySingle.text = "+{0}: {1}xp".format(
-		[accel_increment, accel_cost()])
+		[accel_increment, Util.format(accel_cost())])
 
 
 func _on_to_tower_pressed() -> void:
