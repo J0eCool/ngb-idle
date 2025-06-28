@@ -20,35 +20,45 @@ Tower"
 layout_mode = 2
 text = "XP: {0}"
 
-[node name="Grid" type="GridContainer" parent="."]
+[node name="Damage" type="HBoxContainer" parent="."]
 layout_mode = 2
-columns = 2
 
-[node name="Damage" type="Label" parent="Grid"]
+[node name="Label" type="Label" parent="Damage"]
 layout_mode = 2
 text = "Damage"
 
-[node name="BuyDamage" type="Button" parent="Grid"]
+[node name="BuySingle" type="Button" parent="Damage"]
 layout_mode = 2
 text = "5xp"
 
-[node name="Speed" type="Label" parent="Grid"]
-layout_mode = 2
-text = "Damage"
-
-[node name="BuySpeed" type="Button" parent="Grid"]
+[node name="BuyBulk" type="Button" parent="Damage"]
 layout_mode = 2
 text = "5xp"
 
-[node name="Accel" type="Label" parent="Grid"]
+[node name="Speed" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Speed"]
 layout_mode = 2
 text = "Damage"
 
-[node name="BuyAccel" type="Button" parent="Grid"]
+[node name="BuySingle" type="Button" parent="Speed"]
+layout_mode = 2
+text = "5xp"
+
+[node name="Accel" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Accel"]
+layout_mode = 2
+text = "Damage"
+
+[node name="BuySingle" type="Button" parent="Accel"]
 layout_mode = 2
 text = "5xp"
 
 [connection signal="pressed" from="ToTower" to="." method="_on_to_tower_pressed"]
-[connection signal="pressed" from="Grid/BuyDamage" to="." method="_on_buy_damage_pressed"]
-[connection signal="pressed" from="Grid/BuySpeed" to="." method="_on_buy_speed_pressed"]
-[connection signal="pressed" from="Grid/BuyAccel" to="." method="_on_buy_accel_pressed"]
+[connection signal="pressed" from="Damage/BuySingle" to="." method="_on_buy_damage_pressed"]
+[connection signal="pressed" from="Damage/BuyBulk" to="." method="_on_buy_damage_bulk_pressed"]
+[connection signal="pressed" from="Speed/BuySingle" to="." method="_on_buy_speed_pressed"]
+[connection signal="pressed" from="Accel/BuySingle" to="." method="_on_buy_accel_pressed"]
